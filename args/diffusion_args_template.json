@@ -1,0 +1,51 @@
+{
+    "sampling_args": {
+        "epsilon": 0,
+        "delta_t": 5,
+        "n_samples": 10,
+        "T": 1000,
+        "sampling_algo": "ddim"
+    },
+    "diffusion_args": {
+        "image_width": 32,
+        "image_depth": 50,
+        "in_channels": 12,
+        "out_channels": 9,
+        "base_channels": 64,
+        "n_layers": 3,
+        "layer_type": "double_res",
+        "keep_z": [
+            false,
+            true,
+            true
+        ],
+        "noise_schedule": "linear",
+        "norm": "group",
+        "dvf_scale_factor": 10.0
+    },
+    "diffusion_train_args": {
+        "T": 1000,
+        "save_path": "save_path under diffusion in paths.json",
+        "input_data_path": "input_data_path under diffusion in paths.json",
+        "batch_size": 32,
+        "train_ratio": 0.9,
+        "val_ratio": 0.1,
+        "test_ratio": 0.0,
+        "num_data_loader_workers": 2,
+        "n_epochs": 100,
+        "save_iters": 1000,
+        "optimizer": "adamw",
+        "loss_fn": "mse",
+        "warmup_steps": 500,
+        "lr_max": 2e-4,
+        "lr_min": 2e-6,
+        "gradient_accumulation_steps": 1,
+        "dropout_rate": 0.05,
+        "metrics_t": 50,
+        "data_loader_seed": 42,
+        "lr_scheduler": "cosine",
+        "resample_target_dim": null,
+        "use_warm_checkpoint": false,
+        "warm_checkpoint_path": "warm_checkpoint_path under diffusion in paths.json"
+    }
+}

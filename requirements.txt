@@ -1,0 +1,26 @@
+# monai requires torch < 2.7.0, set torchvision to match
+monai
+torch==2.6.0
+torchvision==0.21.0
+torchmetrics
+lpips
+tqdm
+python-dotenv
+numpy
+pydicom
+tensorboard
+torch-tb-profiler
+matplotlib
+pre-commit
+black
+SimpleITK
+idc_index
+kornia
+tabulate
+# Airlab 
+git+https://github.com/airlab-unibas/airlab.git
+
+imageio
+connected-components-3d
+scikit-image
+opencv-python

@@ -1,0 +1,52 @@
+{
+    "autoencoder_args": {
+        "variational": false,
+        "in_channels": 1,
+        "base_channels": 96,
+        "latent_channels": 3,
+        "out_channels": 1,
+        "layer_type": "double_res",
+        "channel_multipliers": [
+            1,
+            2,
+            4
+        ],
+        "keep_z": [
+            true,
+            true,
+            true
+        ],
+        "norm": "group",
+        "dvf_scale_factor": 10.0
+    },
+    "autoencoder_train_args": {
+        "save_path": "save_path under autoencoder in paths.json",
+        "input_data_path": "input_data_path under autoencoder in paths.json",
+        "batch_size": 2,
+        "train_ratio": 0.8,
+        "val_ratio": 0.1,
+        "test_ratio": 0.1,
+        "num_data_loader_workers": 2,
+        "n_epochs": 100,
+        "save_iters": 1000,
+        "optimizer": "adamw",
+        "loss_fn": "lpe",
+        "l1_factor": 1,
+        "edge_factor": 0,
+        "perceptual_loss_type": "ssim",
+        "slice_views": [
+            "axial", 
+            "coronal",
+            "sagittal"
+        ],
+        "warmup_steps": 500,
+        "lr_max": 1e-4,
+        "lr_min": 2e-6,
+        "gradient_accumulation_steps": 8,
+        "dropout_rate": 0.05,
+        "data_loader_seed": 42,
+        "lr_scheduler": "cosine",
+        "use_warm_checkpoint": false,
+        "warm_checkpoint_path": "warm_checkpoint_path under autoencoder in paths.json"
+    }
+}

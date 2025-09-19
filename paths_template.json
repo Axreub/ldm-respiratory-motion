@@ -1,0 +1,35 @@
+{
+    "inference": {
+        "latent_diffusion": {
+            "image_autoencoder_path": "models/auto_encoders/image/XXXiter.pt",
+            "dvf_autoencoder_path": "models/auto_encoders/dvf/XXXiter.pt",
+            "diffusion_model_path": "models/diffusion/XXXiter.pt"
+        },
+        "image_autoencoder": {
+            "model_path": "models/auto_encoders/image/XXXiter.pt"
+        },
+        "dvf_autoencoder": {
+            "model_path": "models/auto_encoders/dvf/XXXiter.pt"
+        },
+        "non_latent_diffusion": {
+            "model_path": "models/diffusion/XXXiter.pt"
+        }
+    },
+    "autoencoder": {
+        "save_path": "models/auto_encoders/",
+        "warm_checkpoint_path": "models/auto_encoders/YEAR-MONTH-DAY_HOUR-MIN_SEC/XXXiter.pt",
+        "input_data_path": "data/input_data_set"
+    },
+    "diffusion": {
+        "save_path": "models/diffusion/",
+        "warm_checkpoint_path": "models/diffusion/YEAR-MONTH-DAY_HOUR-MIN_SEC/XXXiter.pt",
+        "input_data_path": "data/input_data_set"
+    },
+    "data_processing": {
+        "idc_downloads": {
+            "raw": "data/raw_data/idc_downloads",
+            "processed": "data/idc_downloads", 
+            "latent": "data/latent_idc_downloads"
+        }
+    }
+}
