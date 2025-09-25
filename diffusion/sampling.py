@@ -115,7 +115,7 @@ class DiffusionSampler:
 
         x_t_minus_1 = self._sum_to_last_channels(
             x_t, div_factor, -div_factor * noise_scaling * pred_noise + sigma_t * z
-        )  # Might be wrong, check if still buggy
+        )
 
         return x_t_minus_1
 
